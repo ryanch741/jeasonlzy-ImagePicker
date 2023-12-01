@@ -2,10 +2,14 @@
 
 buildscript {
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:4.2.2'
 
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
@@ -16,7 +20,16 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenLocal()
+        maven {
+            credentials {
+                username '6291daabd12a1c69585d9f11'
+                password 'TX_BSTr)aStd'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2234656-release-njIpiN/'
+        }
         jcenter()
+        google()
     }
 }
 
